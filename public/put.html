@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+    <title>ITAÚ</title>
+</head>
+<body>
+
+    <h1>Troca de informação</h1>
+
+    <label for="identificador">ID</label>
+    <input type="text" id="identificador" disabled>
+
+    <label for="nomeAtualizar">Nome</label>
+    <input type="text" id="nomeAtualizar">
+
+    <label for="sobrenomeAtualizar">Sobrenome</label>
+    <input type="text" id="sobrenomeAtualizar">
+
+    <label for="cpfAtualizar">CPF</label>
+    <input type="text" id="cpfAtualizar">
+
+    <label for="emailAtualizar">Email</label>
+    <input type="email" id="emailAtualizar">
+
+    <label for="senhaAtualizar">Senha</label>
+    <input type="password" id="senhaAtualizar">
+
+    <label for="ruaAtualizar">Rua</label>
+    <input type="text" id="ruaAtualizar">
+
+    <label for="cepAtualizar">CEP</label>
+    <input type="text" id="cepAtualizar">
+
+    <label for="cidadeAtualizar">Cidade</label>
+    <input type="text" id="cidadeAtualizar">
+
+    <label for="estadoAtualizar">Estado</label>
+    <input type="text" id="estadoAtualizar">
+
+    <label for="telefoneAtualizar">Telefone</label>
+    <input type="text" id="telefoneAtualizar">
+
+
+<div class="busca">
+    <label for="identificador">Buscar pessoa pelo CPF:</label>
+
+    <div class="busca-linha">
+        <input type="text" id="identificador" placeholder="Digite o ID">
+        <br><br>
+        <button onclick="buscarDados()">Buscar</button>
+    </div>
+</div>
+<br>
+    <button onclick="atualizarDados()">Atualizar</button>
+
+    <a href="bemvindo.html">Voltar</a>
+
+    <script src="put.js"></script>
+
+</body>
+</html>

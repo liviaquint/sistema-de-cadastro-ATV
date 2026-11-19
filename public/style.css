@@ -1,0 +1,198 @@
+ /* Definição das cores e fontes */
+:root {
+    --laranja-principal: #FF6200;
+    --laranja-hover: #E05500;
+    --azul-profundo: #002D72;
+    --azul-escuro: #001B44;
+    --branco: #FFFFFF;
+    --cinza-fundo: #F8FAFC;
+    --cinza-borda: #CBD5E1;
+    --texto-escuro: #1E293B;
+    --texto-suave: #64748B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Centraliza tudo na tela com fundo gradiente azul */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-escuro) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Estiliza o título ("Login" ou "Cadastro") acima do cartão */
+h1 {
+    color: var(--branco);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+/* Transforma qualquer formulário (Login ou Cadastro) em um cartão moderno */
+form {
+    background-color: var(--branco);
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    border-top: 6px solid var(--laranja-principal);
+}
+
+/* Rótulos dos campos */
+label {
+    color: var(--texto-escuro);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Campos de texto, senha, email e telefone */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 18px;
+    border: 1.5px solid var(--cinza-borda);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--texto-escuro);
+    background-color: var(--cinza-fundo);
+    transition: all 0.2s ease;
+}
+
+/* Efeito ao clicar dentro do campo */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    outline: none;
+    border-color: var(--laranja-principal);
+    background-color: var(--branco);
+    box-shadow: 0 0 0 4px rgba(255, 98, 0, 0.15);
+}
+
+/* Botão principal do formulário */
+form button {
+    background-color: var(--laranja-principal);
+    color: var(--branco);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+form button:hover {
+    background-color: var(--laranja-hover);
+    transform: translateY(-1px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Texto dentro do formulário (ex: "Não tem uma conta?") */
+form p {
+    text-align: center;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    margin-top: 24px;
+}
+
+/* Link dentro do formulário (ex: "Cadastrar" no Login) */
+form a {
+    display: block;
+    text-align: center;
+    color: var(--azul-profundo);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-top: 6px;
+    transition: color 0.2s ease;
+}
+
+form a:hover {
+    color: var(--laranja-principal);
+    text-decoration: underline;
+}
+
+/* Link fora do formulário (ex: "Login" abaixo do cartão de Cadastro) */
+body > a {
+    display: inline-block;
+    text-align: center;
+    color: var(--branco);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+body > a:hover {
+    color: var(--laranja-principal);
+    background-color: rgba(255, 255, 255, 0.08);
+    text-decoration: underline;
+}
+
+/* Área de feedback do JavaScript (#mensagem) */
+#mensagem {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--laranja-principal);
+    min-height: 20px;
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+    form {
+        padding: 30px 20px;
+    }
+}
+
+/* Botão principal do formulário (inclui o input button da página Delete) */
+form button,
+input[type="button"] {
+    background-color: var(--laranja-principal);
+    color: var(--branco);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+form button:hover,
+input[type="button"]:hover {
+    background-color: var(--laranja-hover);
+    transform: translateY(-1px);
+}
+
+form button:active,
+input[type="button"]:active {
+    transform: translateY(0);
+}
